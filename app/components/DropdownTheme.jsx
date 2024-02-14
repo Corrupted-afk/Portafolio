@@ -7,7 +7,7 @@ export const DropdownTheme = () => {
   const { changeTheme } = useContext(ThemeContext);
   return (
     <div className="dropdown ">
-      <div tabIndex={0} role="button" className="btn m-1">
+      <div tabIndex={0} role="button" className="btn m-1 btn-sm">
         Temas
         <svg
           width="12px"
@@ -31,6 +31,15 @@ export const DropdownTheme = () => {
             aria-label="Default"
             onClick={() => changeTheme('light')}
             value="default">Light</button>
+        </li>
+        <li>
+          <button
+            type="radio"
+            name="theme-dropdown"
+            className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+            aria-label="Dark"
+            onClick={() => changeTheme('dark')}
+            value="dark">Dark</button>
         </li>
         <li>
           <button
